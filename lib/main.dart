@@ -20,14 +20,23 @@ class Profile extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Center(
-              child: CircleAvatar(
-                backgroundImage: AssetImage("assets/thumb.jpg"),
-                radius: 35,
-              ),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                CircleAvatar(
+                  backgroundImage: AssetImage("assets/thumb.jpg"),
+                  radius: 35,
+                ),
+                SizedBox(width: 20),
+                Text("Hi, my name is Petr",
+                    style: TextStyle(
+                      color: Colors.grey[350],
+                    ),
+                    textAlign: TextAlign.left),
+              ],
             ),
             Divider(
-              height: 70,
+              height: 55,
               color: Colors.amberAccent,
             ),
             Text(
