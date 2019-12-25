@@ -2,7 +2,15 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(MaterialApp(home: Profile()));
 
-class Profile extends StatelessWidget {
+class Profile extends StatefulWidget {
+  @override
+  _ProfileState createState() => _ProfileState();
+}
+
+class _ProfileState extends State<Profile> {
+  String name = "Petr";
+  int count = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -14,6 +22,15 @@ class Profile extends StatelessWidget {
         ),
         backgroundColor: Colors.grey[850],
         centerTitle: true,
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add),
+        onPressed: () {
+          setState(() {
+            count++;
+          });
+        },
+        backgroundColor: Colors.grey[850],
       ),
       body: Padding(
         padding: EdgeInsets.fromLTRB(30, 30, 20, 0),
@@ -49,7 +66,7 @@ class Profile extends StatelessWidget {
             ),
             SizedBox(height: 2),
             Text(
-              "Petr",
+              "$name",
               style: TextStyle(
                   color: Colors.amberAccent,
                   fontSize: 30,
@@ -104,7 +121,7 @@ class Profile extends StatelessWidget {
                 ),
                 Container(
                   child: Text(
-                    "Heading",
+                    "$count",
                     style: TextStyle(
                         color: Colors.grey[400],
                         fontSize: 20,
