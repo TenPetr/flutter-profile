@@ -91,6 +91,30 @@ class Profile extends StatelessWidget {
                   ),
                 ),
               ],
+            ),
+            SizedBox(height: 20),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Container(
+                  child: Icon(
+                    Icons.email,
+                    color: Colors.amberAccent,
+                  ),
+                ),
+                Container(
+                  child: Text(
+                    "Heading",
+                    style: TextStyle(
+                        color: Colors.grey[400],
+                        fontSize: 20,
+                        fontWeight: FontWeight.w600),
+                  ),
+                ),
+                Container(
+                  child: Icon(Icons.cloud, color: Colors.amberAccent),
+                ),
+              ],
             )
           ],
         ),
